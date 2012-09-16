@@ -2,7 +2,15 @@
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
+echo $DIR
+cd $DIR
+
+if ! hash awesome
+then
+    sudo apt-get install awesome awesome-extra
+fi
+
 mkdir ~/.config/awesome
-ln -sf $DIR"/config/awesome/rc.lua" ~/.config/awesome/rc.lua
-ln -sf $DIR"/config/awesome/debian" ~/.config/awesome/debian
+ln -sv $DIR"/config/awesome/rc.lua" ~/.config/awesome/rc.lua
+ln -sv "$DIR""/config/awesome/debian" ~/.config/awesome/
 
