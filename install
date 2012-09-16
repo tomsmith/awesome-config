@@ -11,6 +11,8 @@ then
 fi
 
 mkdir ~/.config/awesome
-ln -sv $DIR"/config/awesome/rc.lua" ~/.config/awesome/rc.lua
-ln -sv "$DIR""/config/awesome/debian" ~/.config/awesome/
+ln -fsv $DIR"/config/awesome/rc.lua" ~/.config/awesome/rc.lua
+ln -fsv "$DIR""/config/awesome/debian" ~/.config/awesome/
+
+sudo ln -fsv $DIR"/themes/takeontom" /usr/share/awesome/themes/
 
