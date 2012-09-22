@@ -259,7 +259,6 @@ clientkeys = awful.util.table.join(
     awful.key({ modkey, "Shift"   }, "c",      function (c) c:kill()                         end),
     awful.key({ modkey, "Control" }, "space",  awful.client.floating.toggle                     ),
     awful.key({ modkey, "Control" }, "Return", function (c) c:swap(awful.client.getmaster()) end),
-    awful.key({ modkey,           }, "o",      awful.client.movetoscreen                        ),
     awful.key({ modkey, "Shift"   }, "r",      function (c) c:redraw()                       end),
     awful.key({ modkey,           }, "t",      function (c) c.ontop = not c.ontop            end),
     awful.key({ modkey,           }, "n",
@@ -272,7 +271,24 @@ clientkeys = awful.util.table.join(
         function (c)
             c.maximized_horizontal = not c.maximized_horizontal
             c.maximized_vertical   = not c.maximized_vertical
-        end)
+        end),
+
+    -- multiple monitors
+    -- focus monitor
+    awful.key({modkey,            }, "F1",     function () awful.screen.focus(1) end),
+    awful.key({modkey,            }, "F2",     function () awful.screen.focus(2) end),
+    awful.key({modkey,            }, "F3",     function () awful.screen.focus(3) end),
+    awful.key({modkey,            }, "F4",     function () awful.screen.focus(4) end),
+
+    -- move client to monitor
+    awful.key({ modkey, "Shift"   }, "F1", function (c) awful.client.movetoscreen(c, 1) end),
+    awful.key({ modkey, "Shift"   }, "F2", function (c) awful.client.movetoscreen(c, 2) end),
+    awful.key({ modkey, "Shift"   }, "F3", function (c) awful.client.movetoscreen(c, 3) end),
+    awful.key({ modkey, "Shift"   }, "F4", function (c) awful.client.movetoscreen(c, 4) end),
+
+    -- move client to left or right monitor
+    awful.key({ modkey,           }, "o",      function(c) awful.client.movetoscreen(c,c.screen-1) end ),
+    awful.key({ modkey,           }, "p",      function(c) awful.client.movetoscreen(c,c.screen+1) end )
 )
 
 -- Compute the maximum number of digit we need, limited to 9
