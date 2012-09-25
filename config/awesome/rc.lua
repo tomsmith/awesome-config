@@ -277,14 +277,14 @@ clientkeys = awful.util.table.join(
     -- focus monitor
     awful.key({modkey,            }, "F1",     function () awful.screen.focus(1) end),
     awful.key({modkey,            }, "F2",     function () awful.screen.focus(2) end),
-    awful.key({modkey,            }, "F3",     function () awful.screen.focus(4) end),
-    awful.key({modkey,            }, "F4",     function () awful.screen.focus(3) end),
+    awful.key({modkey,            }, "F3",     function () awful.screen.focus(3) end),
+    awful.key({modkey,            }, "F4",     function () awful.screen.focus(4) end),
 
     -- move client to monitor
     awful.key({ modkey, "Shift"   }, "F1", function (c) awful.client.movetoscreen(c, 1) end),
     awful.key({ modkey, "Shift"   }, "F2", function (c) awful.client.movetoscreen(c, 2) end),
-    awful.key({ modkey, "Shift"   }, "F3", function (c) awful.client.movetoscreen(c, 4) end),
-    awful.key({ modkey, "Shift"   }, "F4", function (c) awful.client.movetoscreen(c, 3) end),
+    awful.key({ modkey, "Shift"   }, "F3", function (c) awful.client.movetoscreen(c, 3) end),
+    awful.key({ modkey, "Shift"   }, "F4", function (c) awful.client.movetoscreen(c, 4) end),
 
     -- move client to left or right monitor
     awful.key({ modkey,           }, "o",      function(c) awful.client.movetoscreen(c,c.screen-1) end ),
