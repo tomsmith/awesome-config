@@ -357,7 +357,7 @@ awful.rules.rules = {
     { rule = { class = "Skype" },
       properties = { floating = true, tag = tags[2][9] } },
     { rule = { class = "Gvim" },
-      properties = { tag = tags[1][2] } },
+      properties = { tag = tags[2][2] } },
     { rule = { class = "shell-fm" },
       properties = { tag = tags[1][9] } }
     -- Set Firefox to always map on tags number 2 of screen 1.
