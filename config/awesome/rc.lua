@@ -354,6 +354,8 @@ awful.rules.rules = {
       properties = { floating = true } },
     { rule = { class = "gimp" },
       properties = { floating = true } },
+    { rule = { class = "Pidgin" },
+      properties = { floating = true, tag = tags[4][9] } },
     { rule = { class = "Skype" },
       properties = { floating = true, tag = tags[2][9] } },
     { rule = { class = "Gvim" },
@@ -396,7 +398,9 @@ end)
 client.add_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
+awful.util.spawn_with_shell("nm-applet")
 awful.util.spawn_with_shell("xterm -class shell-fm -e shell-fm")
 awful.util.spawn_with_shell("google-chrome")
 awful.util.spawn_with_shell("skype")
+awful.util.spawn_with_shell("pidgin")
 
