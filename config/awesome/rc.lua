@@ -399,8 +399,9 @@ client.add_signal("focus", function(c) c.border_color = beautiful.border_focus e
 client.add_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
 -- }}}
 awful.util.spawn_with_shell("nm-applet")
-awful.util.spawn_with_shell("xterm -class shell-fm -e shell-fm")
+awful.util.spawn_with_shell("xterm -class shell-fm -e mplayer -playlist http://www.uzic.ch/tek.m3u")
 awful.util.spawn_with_shell("google-chrome")
 awful.util.spawn_with_shell("skype")
 awful.util.spawn_with_shell("pidgin")
+awful.util.spawn_with_shell("dropbox start")
 
